@@ -1,0 +1,13 @@
+Providence	Hayarano 459
+Providence	Akkeshi 462
+Providence	Reading	701
+Providence	Nelson 30
+Providence	Arcadia	1579
+Providence	Kiyobico 519
+Providence	Takazaki 416
+Providence	Biruwa 487
+Providence	Shinobi 347
+Ironbard	Vardo 552
+Ironbard	Hofn 961
+Ironbard	Helvig 449
+
