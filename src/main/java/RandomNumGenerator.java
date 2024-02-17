@@ -13,9 +13,21 @@ public class RandomNumGenerator {
         BufferedReader br= new BufferedReader(new FileReader(fileName));
         String line;
         while ((line= br.readLine())!=null){
-            islandName=line;
+            String [] arr= line.split("\\s");
+           islandName=arr[0];
+           if(!(island.contains(islandName))&& islandName!=null) {
+               island.add(islandName);
+               island.remove(null);
+           }
+
         }
 
         return island;
+    }
+
+    public static void main(String[] args) throws IOException {
+        RandomNumGenerator rng= new RandomNumGenerator();
+        System.out.println(rng.readList());
+        System.out.println(rng.readList().size());
     }
 }
