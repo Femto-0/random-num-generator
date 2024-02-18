@@ -68,13 +68,13 @@ public class RandomNumGenerator {
     }
 
 
-    public void findRandomNum(int preSpecifiedNumber, ArrayList<String> readList, ArrayList<String> createCityList, ArrayList<String> createHouseList) {
+    public void findRandomNum(ArrayList<String> readList, ArrayList<String> createCityList, ArrayList<String> createHouseList) {
         ArrayList<Integer> randomList = new ArrayList<>();
         int totalHouseInAnIsland = 0;
 
         // Calculate the total number of houses in an island
         for (int i = 0; i < createHouseList.size(); i++) {
-            if (!createCityList.get(i).equals("--")) {
+            if (!createCityList.get(i).equals("--")) { //this statement is here because I was previously trying to work on multiple islands at the same time and -- separated two islands.
                 totalHouseInAnIsland++;
             }
         }
@@ -84,7 +84,7 @@ public class RandomNumGenerator {
         // Ensure there are enough cities for random selection
        // if (num <= totalHouseInAnIsland) {
             // Generate random numbers for the specified number of times
-            for (int i = 0; i < preSpecifiedNumber; i++) {
+            for (int i = 0; i < totalHouseInAnIsland; i++) {
                 int maxNum = Integer.parseInt(createHouseList.get(i));
                 int randomNum = (int) (Math.random() * (maxNum - 1)) + 1;
                 randomList.add(randomNum);
