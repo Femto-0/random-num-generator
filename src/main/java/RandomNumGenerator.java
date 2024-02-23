@@ -1,3 +1,6 @@
+// I decided to make this project when professor Hooks was teaching Complete Randomized Design. She said something along the lines of, " We must assign the test subjects randomly using some
+//sort of random number generator not what we think is random" and when I had to collect data myself, the thought of using a random num generator 100 times wasn't very appealing.
+//So, I decided to make an app who can give me random num for as many samples as I want in an instance.
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -26,7 +29,7 @@ public class RandomNumGenerator {
     }
 
     public ArrayList<String> createCityList(ArrayList<String> arrList) throws IOException {
-        ArrayList<String> cityList = new ArrayList<>();
+        ArrayList<String> cityList = new  ArrayList<>();
         BufferedReader br = new BufferedReader(new FileReader(fileName));
         String firstWord;
         String[] arr;
@@ -112,6 +115,6 @@ public class RandomNumGenerator {
         System.out.println(rng.readList().size());
         System.out.println("--------------------------");
         //here, pre-specified number refers to the number of cities that you need random house number from.
-        rng.findRandomNum(9, rng.readList(), rng.createCityList(rng.readList()),rng.createHouseList(rng.readList()));
+        rng.findRandomNum( rng.readList(), rng.createCityList(rng.readList()),rng.createHouseList(rng.readList()));
     }
 }
